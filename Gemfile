@@ -24,6 +24,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml'
 gem 'erb2haml', group: :development
+gem 'faker'
 
 gem 'kaminari'
 group :development, :test do
