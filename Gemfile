@@ -33,5 +33,5 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
-  gem 'pry-rails'
+  gem 'pry-state'
 end

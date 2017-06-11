@@ -5,7 +5,7 @@ FactoryGirl.define do
     email {Faker::Internet.email}
     first_name {Faker::Name.name.split[0]}
     last_name {Faker::Name.name.split[1]}
-    password "password"
+    password_digest "password"
     role 0
   end
 end
