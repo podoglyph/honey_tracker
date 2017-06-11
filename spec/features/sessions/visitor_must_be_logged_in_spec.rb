@@ -9,6 +9,7 @@ RSpec.describe 'As a visitor' do
 
   it "must be logged in to access application" do
     visit root_path
-    expect(page).to have_content('Please Login.')
+    expect(page).to have_content('Sign In')
   end
+
 end
