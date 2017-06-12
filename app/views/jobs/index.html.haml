@@ -1,0 +1,7 @@
+%h1 Viewing All Jobs
+
+-@jobs.each do |job|
+  =link_to job.title, job_path(job)
+  =job.start_date
+  =job.end_date
+  =job.completed
