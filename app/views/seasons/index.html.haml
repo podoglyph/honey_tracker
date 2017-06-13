@@ -1,5 +1,4 @@
 %h1 Viewing All Seasons
 
 -@seasons.each do |season|
-  =link_to "#{season.name}", season_path(season)
-  =season.year
+  =link_to "#{season.name} #{season.year}", season_path(season)

@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   resources :users, only: [:new, :create]
   resources :locations, only: [:index, :show]
+  resources :jobs, only: [:index, :show]
   resources :seasons, only: [:index, :show]
 end

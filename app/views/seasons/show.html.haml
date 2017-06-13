@@ -1,6 +1,8 @@
-%h1 Viewing: @season.name + " " @season.year
-
-%th.table-stats
-  Season Stats:
-  %tr #{@season.name}
-  %tr #{@season.year}
+%h1 Viewing: #{@season.name} #{@season.year}
+%thead
+  %tr
+    %th Season Stats:
+%tbody
+  %tr.table-stats
+    %td=@season.name
+    %td=@season.year

@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20170612045217) do
 
   create_table "seasons", force: :cascade do |t|
     t.string "name"
-    t.datetime "year"
+    t.string "year"
   end
 
   create_table "users", force: :cascade do |t|
