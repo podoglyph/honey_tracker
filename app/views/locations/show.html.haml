@@ -1,6 +1,5 @@
 %h1 Viewing: #{@location.name}
 
-%th
-  Coordinates:
-  %tr #{@location.lat}
-  %tr #{@location.long}
+%h3 Location Details:
+
+%iframe{src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBGJhcczudvxoZV90ePPIH6prQiNedeqa8&zoom=12&q=#{@location.lat}, #{@location.long} ", width: :"600", height: :"450", frameborder: :"0"}

@@ -1,4 +1,6 @@
 %h1 Viewing All Locations
 
--@locations.each do |location|
-  =link_to location.name, location_path(location)
+%ul
+  -@locations.each do |location|
+    %li
+      =link_to location.name, location_path(location)

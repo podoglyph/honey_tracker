@@ -1,4 +1,6 @@
 %h1 Viewing All Seasons
 
--@seasons.each do |season|
-  =link_to "#{season.name} #{season.year}", season_path(season)
+%ul.list-inline
+  -@seasons.each do |season|
+    %li.btn.btn-default
+      =link_to "#{season.name} #{season.year}", season_path(season)

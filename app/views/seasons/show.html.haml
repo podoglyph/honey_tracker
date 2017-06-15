@@ -1,8 +1,24 @@
 %h1 Viewing: #{@season.name} #{@season.year}
-%thead
-  %tr
-    %th Season Stats:
-%tbody
-  %tr.table-stats
-    %td=@season.name
-    %td=@season.year
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Bee Yard
+      %th
+        Num Hives
+      %th
+        Num Supers
+      %th
+        Num Dead Hives
+  %tbody
+    -@season.season_locations.each do |sl|
+      %tr
+        %td
+          =sl.location.name
+        %td
+          =sl.num_hives
+        %td
+          =sl.num_supers
+        %td
+          =sl.num_dead

@@ -1,2 +1,26 @@
 User.create(email: "d@d.com", first_name: "Don", last_name: "Quixote", password: "password", role: 1)
 User.create(email: "s@p.com", first_name: "Sancho", last_name: "Panza", password: "password", role: 0)
+
+season = Season.create(name: "Summer", year: 2017)
+Season.create(name: "Summer", year: 2016)
+Season.create(name: "Summer", year: 2015)
+Season.create(name: "Summer", year: 2014)
+Season.create(name: "Summer", year: 2013)
+
+Season.create(name: "Winter", year: 2017)
+Season.create(name: "Winter", year: 2016)
+Season.create(name: "Winter", year: 2015)
+Season.create(name: "Winter", year: 2014)
+Season.create(name: "Winter", year: 2013)
+
+loc1 = Location.create(name: "Kessler", lat: 46.78689224, long: -101.05866651)
+loc2 = Location.create(name: "Honey Bee", lat: 46.1005546, long: -102.16948754)
+loc3 = Location.create(name: "Jorgenson", lat: 46.37820269, long: -101.12627232)
+loc4 = Location.create(name: "Grass Hill", lat: 45.99671668, long: -100.586097)
+loc5 = Location.create(name: "Pocahontas", lat: 46.91383484, long: -100.27418175)
+
+season.season_locations.create(location_id: loc1.id, num_hives: 48, num_supers: 130, num_dead: 2)
+season.season_locations.create(location_id: loc2.id, num_hives: 48, num_supers: 132, num_dead: 1)
+season.season_locations.create(location_id: loc3.id, num_hives: 48, num_supers: 116, num_dead: 1)
+season.season_locations.create(location_id: loc4.id, num_hives: 48, num_supers: 133, num_dead: 0)
+season.season_locations.create(location_id: loc5.id, num_hives: 48, num_supers: 156, num_dead: 0)
