@@ -1,5 +1,5 @@
 class Job < ApplicationRecord
-  belongs_to :location
-  validates :title, :start_date, presence: true
-  validates_inclusion_of :completed, in: [true, false]
+  has_many :location_jobs
+  has_many :locations, through: :location_jobs
+  validates :job_name, presence: true
 end

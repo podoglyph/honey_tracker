@@ -10,20 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170615185635) do
+ActiveRecord::Schema.define(version: 20170615223127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "forages", force: :cascade do |t|
+    t.string "forage_type"
+  end
+
   create_table "jobs", force: :cascade do |t|
-    t.string "title"
-    t.datetime "start_date"
-    t.datetime "end_date"
+    t.string "job_name"
+  end
+
+  create_table "location_forages", force: :cascade do |t|
     t.bigint "location_id"
-    t.bigint "user_id"
+    t.bigint "forage_id"
+    t.index ["forage_id"], name: "index_location_forages_on_forage_id"
+    t.index ["location_id"], name: "index_location_forages_on_location_id"
+  end
+
+  create_table "location_jobs", force: :cascade do |t|
+    t.bigint "location_id"
+    t.bigint "job_id"
     t.boolean "completed", default: false
-    t.index ["location_id"], name: "index_jobs_on_location_id"
-    t.index ["user_id"], name: "index_jobs_on_user_id"
+    t.index ["job_id"], name: "index_location_jobs_on_job_id"
+    t.index ["location_id"], name: "index_location_jobs_on_location_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -55,6 +67,10 @@ ActiveRecord::Schema.define(version: 20170615185635) do
     t.integer "role", default: 0
   end
 
+  add_foreign_key "location_forages", "forages"
+  add_foreign_key "location_forages", "locations"
+  add_foreign_key "location_jobs", "jobs"
+  add_foreign_key "location_jobs", "locations"
   add_foreign_key "season_locations", "locations"
   add_foreign_key "season_locations", "seasons"
 end

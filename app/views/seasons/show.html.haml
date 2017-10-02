@@ -1,4 +1,4 @@
-%h1 Viewing: #{@season.name} #{@season.year}
+%h1 #{@season.name} #{@season.year}
 
 %table.table.table-striped
   %thead
@@ -6,11 +6,15 @@
       %th
         Bee Yard
       %th
-        Num Hives
+        Hives
       %th
-        Num Supers
+        Supers
       %th
-        Num Dead Hives
+        Dead Hives
+      %th
+        Forage
+      %th
+        Jobs
   %tbody
     -@season.season_locations.each do |sl|
       %tr
@@ -22,3 +26,9 @@
           =sl.num_supers
         %td
           =sl.num_dead
+        %td
+          -sl.location.forages.each do |forage|
+            =forage.forage_type
+        %td
+          -sl.location.jobs.each do |job|
+            =job.job_name

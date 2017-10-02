@@ -1,5 +1,10 @@
 %h1 Viewing: #{@location.name}
 
 %h3 Location Details:
+.row.col-md-6
+  Forages:
+  -@location.forages.each do |forage|
+    =forage.forage_type
 
-%iframe{src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBGJhcczudvxoZV90ePPIH6prQiNedeqa8&zoom=12&q=#{@location.lat}, #{@location.long} ", width: :"600", height: :"450", frameborder: :"0"}
+.row.col-md-6
+  %iframe{src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBGJhcczudvxoZV90ePPIH6prQiNedeqa8&zoom=12&q=#{@location.lat}, #{@location.long} ", width: :"600", height: :"450", frameborder: :"0"}

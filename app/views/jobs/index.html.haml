@@ -1,7 +1,6 @@
 %h1 Viewing All Jobs
 
--@jobs.each do |job|
-  =link_to job.title, job_path(job)
-  =job.start_date
-  =job.end_date
-  =job.completed
+%ul
+  -@jobs.each do |job|
+    %li
+      =link_to job.job_name, job_path(job)
