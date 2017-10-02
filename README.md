@@ -1,4 +1,5 @@
 # Honey Tracker
+![travis_status](https://travis-ci.org/podoglyph/honey_tracker.svg?branch=master)
 
 Honey Tracker is designed to aid commercial beekeepers track and manage hives over the course of the year. Users can create Seasons and add Bee Yards, hives, forage, and jobs, such as mite treatment, pulling, and more.
 
