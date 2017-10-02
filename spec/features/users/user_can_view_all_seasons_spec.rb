@@ -29,7 +29,6 @@ RSpec.feature 'A registered user can' do
 
       click_on "#{season1.name} #{season1.year}"
       expect(current_path).to eq(season_path(season1))
-      save_and_open_page
       within(:css, 'h1.table-stats') do
         expect(page).to have_content("#{season1.name} #{season1.year}")
         expect(page).to_not have_content("#{season2.name} #{season2.year}")
