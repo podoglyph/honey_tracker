@@ -1,0 +1,6 @@
+%h1 Seasons
+
+%ul.list-inline
+  -@seasons.each do |season|
+    %li
+      =link_to "#{season.name} #{season.year}", season_path(season), class: "btn btn-primary btn-sm"

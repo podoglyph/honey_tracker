@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title HoneyTracker
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body
+    = controller.redirect_to login_path unless require_user? || request.path == login_path
+
+    %nav.navbar.navbar-default
+      .container-fluid
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              =link_to "Seasons", seasons_path
+            %li
+              =link_to "Locations", locations_path
+            %li
+              =link_to "Jobs", jobs_path
+            %li
+              =link_to "Login", login_path
+    .container
+      .row
+        = yield

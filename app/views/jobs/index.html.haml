@@ -1,0 +1,6 @@
+%h1 Viewing All Jobs
+
+%ul
+  -@jobs.each do |job|
+    %li
+      =link_to job.job_name, job_path(job)
