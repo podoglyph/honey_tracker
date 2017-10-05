@@ -1,6 +1,8 @@
 # Honey Tracker
 ![travis_status](https://travis-ci.org/podoglyph/honey_tracker.svg?branch=master)
 
+Visit the live app on Heroku [here](https://honey-tracker.herokuapp.com).
+
 Honey Tracker is designed to aid commercial beekeepers track and manage hives over the course of the year. Users can create Seasons and add Bee Yards, hives, forage, and jobs, such as mite treatment, pulling, and more.
 
 ## Getting Started
@@ -8,7 +10,9 @@ Honey Tracker is designed to aid commercial beekeepers track and manage hives ov
 Clone this repo and move into the project root, then:
 
 `bundle install`
+
 `rails db:setup`
+
 `rails db:seed`
 
 
