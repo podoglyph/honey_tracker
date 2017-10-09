@@ -5,11 +5,11 @@ RSpec.describe Season do
 
   context "On the Season index view" do
 
-      it "displays the status" do
+      xit "displays the status" do
         season1 = create(:season)
         loc = create(:location)
         sl = season1.season_locations.create(location_id: loc.id, num_hives: 48, num_supers: 145, num_dead: 0)
-        binding.pry
+        # binding.pry
       end
 
       xit "displays the completed locations" do
