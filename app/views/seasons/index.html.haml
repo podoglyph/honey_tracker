@@ -1,6 +1,29 @@
 %h1 Seasons
 
-%ul.list-inline
-  -@seasons.each do |season|
-    %li
-      =link_to "#{season.name} #{season.year}", season_path(season), class: "btn btn-primary btn-sm"
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Season
+      %th
+        Status
+      %th
+        Locations Completed
+      %th
+        Jobs Completed
+      %th
+        Avg. Pull
+
+  %tbody
+    -@seasons.each do |season|
+      %tr
+        %td
+          =link_to "#{season.name} #{season.year}", season_path(season)
+        %td
+          -# season.location.status
+        %td
+          -# season.locations where status == "complete"
+        %td
+          -# season.locations.jobs where status == "complete"
+        %td
+          -# season.locations.jobs.avg_rating
